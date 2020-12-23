@@ -4,10 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+export type typeOfState = {
+    start: number,
+    end: number
+}
+let state = {
+    start: 0,
+    end: 5
+}
+
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App start={state.start} end={state.end}/>,
   document.getElementById('root')
 );
 
