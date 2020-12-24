@@ -6,17 +6,30 @@ import reportWebVitals from './reportWebVitals';
 
 export type typeOfState = {
     start: number,
+    end: number,
+    max: number,
+    min: number
+
+}
+export type typeOfMaxMin = {
+    max: number,
+    min: number
+}
+export type typeOfStartEnd = {
+    start: number,
     end: number
 }
 let state = {
     start: 0,
-    end: 5
+    end: 5,
+    max:7,
+    min:0
 }
 
 
 
 ReactDOM.render(
-    <App start={state.start} end={state.end}/>,
+    <App start={state.start} end={state.end} min={state.min} max={state.max}/>,
   document.getElementById('root')
 );
 
